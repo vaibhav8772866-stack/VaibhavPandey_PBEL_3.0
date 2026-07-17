@@ -1,5 +1,5 @@
 import { useState } from "react";
-import axios from "axios";
+import API from "../services/api";
 import { FaPaperPlane, FaMicrophone } from "react-icons/fa";
 
 function ChatInput({ setMessages, setTyping }) {
@@ -50,12 +50,9 @@ function ChatInput({ setMessages, setTyping }) {
     try {
       await new Promise((resolve) => setTimeout(resolve, 1200));
 
-      const response = await axios.post(
-        "https://vaibhavpandey-pbel-3-0-1.onrender.com",
-        {
-          message: currentMessage,
-        }
-      );
+      const response = await API.post("/chat", {
+  message: currentMessage,
+    });
 
       setMessages((prev) => [
         ...prev,
