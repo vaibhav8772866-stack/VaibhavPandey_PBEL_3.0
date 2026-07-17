@@ -51,7 +51,7 @@ function ChatInput({ setMessages, setTyping }) {
       await new Promise((resolve) => setTimeout(resolve, 1200));
 
       const response = await axios.post(
-        "http://127.0.0.1:5000/chat",
+        "https://vaibhavpandey-pbel-3-0-1.onrender.com",
         {
           message: currentMessage,
         }

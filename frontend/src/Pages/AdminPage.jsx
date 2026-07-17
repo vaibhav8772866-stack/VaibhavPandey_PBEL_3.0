@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
-const API = "http://127.0.0.1:5000";
+const API = "https://vaibhavpandey-pbel-3-0-1.onrender.com";
 
 function AdminPage() {
   const navigate = useNavigate();
