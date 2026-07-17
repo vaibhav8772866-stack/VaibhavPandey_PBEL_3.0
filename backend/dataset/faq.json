@@ -1,0 +1,42 @@
+[
+  {
+    "question": "What is the admission process?",
+    "answer": "You can apply online through the college admission portal."
+  },
+  {
+    "question": "What are the admission requirements?",
+    "answer": "Students must submit academic documents, ID proof, and application form."
+  },
+  {
+    "question": "What is the tuition fee?",
+    "answer": "The tuition fee is ₹50,000 per semester."
+  },
+  {
+    "question": "What is the hostel fee?",
+    "answer": "The hostel fee is ₹45,000 per year including mess."
+  },
+  {
+    "question": "Is scholarship available?",
+    "answer": "Yes, scholarships are available based on merit and eligibility."
+  },
+  {
+    "question": "What is the minimum attendance?",
+    "answer": "Students must maintain at least 75% attendance."
+  },
+  {
+    "question": "When are the exams conducted?",
+    "answer": "Semester exams are conducted twice a year."
+  },
+  {
+    "question": "What are the library timings?",
+    "answer": "The library is open from 9:00 AM to 8:00 PM."
+  },
+  {
+    "question": "Does the college provide transport?",
+    "answer": "Yes, bus facilities are available for nearby cities."
+  },
+  {
+    "question": "How are placements?",
+    "answer": "The placement cell provides training, internships, and campus recruitment."
+  }
+]
