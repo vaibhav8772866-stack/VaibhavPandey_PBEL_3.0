@@ -1,14 +1,22 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const API = "http://127.0.0.1:5000";
 
 function AdminPage() {
+  const navigate = useNavigate();
+
   const [faqs, setFaqs] = useState({});
   const [keyword, setKeyword] = useState("");
   const [answer, setAnswer] = useState("");
   const [search, setSearch] = useState("");
   const [editKeyword, setEditKeyword] = useState(null);
+
+  const logout = () => {
+    localStorage.removeItem("admin");
+    navigate("/login");
+  };
 
   // Load FAQs
   const loadFaqs = async () => {
@@ -89,9 +97,31 @@ function AdminPage() {
         padding: "30px",
       }}
     >
-      <h1 style={{ textAlign: "center", marginBottom: "25px" }}>
-        AI Student Chatbot - Admin Panel
-      </h1>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+          marginBottom: "25px",
+        }}
+      >
+        <h1>AI Student Chatbot - Admin Panel</h1>
+
+        <button
+          onClick={logout}
+          style={{
+            background: "#dc2626",
+            color: "white",
+            border: "none",
+            padding: "10px 20px",
+            borderRadius: "6px",
+            cursor: "pointer",
+            fontWeight: "bold",
+          }}
+        >
+          Logout
+        </button>
+      </div>
 
       <div
         style={{
@@ -111,6 +141,7 @@ function AdminPage() {
             width: "100%",
             padding: "10px",
             marginBottom: "10px",
+            borderRadius: "5px",
           }}
         />
 
@@ -123,6 +154,7 @@ function AdminPage() {
             width: "100%",
             padding: "10px",
             marginBottom: "10px",
+            borderRadius: "5px",
           }}
         />
 
@@ -158,6 +190,7 @@ function AdminPage() {
             width: "100%",
             padding: "10px",
             marginBottom: "20px",
+            borderRadius: "5px",
           }}
         />
 
@@ -187,6 +220,7 @@ function AdminPage() {
                   border: "none",
                   padding: "8px 15px",
                   cursor: "pointer",
+                  borderRadius: "5px",
                 }}
               >
                 Edit
@@ -200,6 +234,7 @@ function AdminPage() {
                   border: "none",
                   padding: "8px 15px",
                   cursor: "pointer",
+                  borderRadius: "5px",
                 }}
               >
                 Delete

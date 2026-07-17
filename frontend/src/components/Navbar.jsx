@@ -1,34 +1,45 @@
-import { FaRobot, FaTrash, FaPlus } from "react-icons/fa";
+import {
+  FaRobot,
+  FaTrash,
+  FaPlus,
+  FaDownload,
+  FaUserShield,
+} from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 function Navbar({ clearChat }) {
+  const navigate = useNavigate();
+
   const newChat = () => {
     clearChat();
   };
 
   return (
-    <nav className="h-16 bg-slate-900 border-b border-slate-700 px-6 flex items-center justify-between">
+    <nav className="h-16 bg-[#0f62fe] shadow-lg px-6 flex items-center justify-between">
 
       {/* Left */}
       <div className="flex items-center gap-3">
-        <FaRobot className="text-cyan-400 text-3xl" />
+        <div className="bg-white p-2 rounded-full">
+          <FaRobot className="text-[#0f62fe] text-2xl" />
+        </div>
 
         <div>
           <h1 className="text-xl font-bold text-white">
-            AI Student Chatbot
+            IBM AI Student Support
           </h1>
 
-          <p className="text-xs text-gray-400">
-            Student Support Services
+          <p className="text-sm text-blue-100">
+            Smart Campus Chatbot
           </p>
         </div>
       </div>
 
       {/* Right */}
-      <div className="flex gap-3">
+      <div className="flex items-center gap-3">
 
         <button
           onClick={newChat}
-          className="bg-cyan-500 hover:bg-cyan-600 px-4 py-2 rounded-lg text-white flex items-center gap-2 transition"
+          className="bg-white text-[#0f62fe] px-4 py-2 rounded-lg font-semibold hover:bg-gray-100 transition flex items-center gap-2"
         >
           <FaPlus />
           New Chat
@@ -36,10 +47,18 @@ function Navbar({ clearChat }) {
 
         <button
           onClick={clearChat}
-          className="bg-red-500 hover:bg-red-600 px-4 py-2 rounded-lg text-white flex items-center gap-2 transition"
+          className="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg transition flex items-center gap-2"
         >
           <FaTrash />
-          Clear Chat
+          Clear
+        </button>
+
+        <button
+          onClick={() => navigate("/login")}
+          className="bg-black hover:bg-gray-900 text-white px-4 py-2 rounded-lg transition flex items-center gap-2"
+        >
+          <FaUserShield />
+          Admin
         </button>
 
       </div>
