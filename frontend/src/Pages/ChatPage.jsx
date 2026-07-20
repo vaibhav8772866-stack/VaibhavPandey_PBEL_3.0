@@ -3,7 +3,7 @@ import { jsPDF } from "jspdf";
 
 import Navbar from "../components/Navbar";
 import Sidebar from "../components/Sidebar";
-import ChatWindow from "../components/ChatWindow";
+import ChatWindow from "../components/ChatWindowNew";
 import ChatInput from "../components/ChatInput";
 
 function ChatPage() {
